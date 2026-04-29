@@ -5,7 +5,7 @@
 
 ## Live Dashboard
 
-https://retail-analytics-recommendation-system-w2v2qhphi8ojmfrvrhkffy.streamlit.app/
+[![Open Dashboard](https://img.shields.io/badge/Launch%20Streamlit%20Dashboard-Click%20Here-0ea5e9?style=for-the-badge&logo=streamlit)](https://retail-analytics-recommendation-system-w2v2qhphi8ojmfrvrhkffy.streamlit.app/)
 
 ---
 
@@ -81,11 +81,6 @@ Recommended Products:
 
 ---
 
-## Recommendation Visualization
-
-![Recommendations](images/recommendation_output.png)
-
----
 
 ## Business Value
 
