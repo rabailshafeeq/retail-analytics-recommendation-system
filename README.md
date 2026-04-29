@@ -5,27 +5,56 @@ Turning Transaction Data into Actionable Business Intelligence
 
 ## Project Overview
 
-This project analyzes real-world retail transaction data to uncover business insights and build a basic product recommendation system. The goal is to help e-commerce businesses improve customer retention, optimize product strategy, and increase revenue through data-driven decisions.
+This project analyzes real-world retail transaction data to extract meaningful business insights and build a product recommendation system. The objective is to help e-commerce businesses understand customer behavior, optimize product performance, and improve revenue through data-driven decision-making.
+
+The project combines:
+- Exploratory Data Analysis (EDA)
+- Customer segmentation (RFM analysis)
+- Product performance analysis
+- Time-based sales trends
+- Product recommendation system
 
 ---
 
-## 🧹 1. Data Quality Analysis
+## Business Problem
 
-Before performing any analysis, data quality was evaluated to ensure reliability.
+E-commerce businesses often struggle with:
 
-### Missing Values Percentage
+- Understanding customer purchasing behavior  
+- Identifying high-value customers  
+- Improving product discovery  
+- Increasing cross-selling opportunities  
+- Reducing product returns  
+
+This project addresses these challenges using data analytics and recommendation techniques.
+
+---
+
+## 1. Data Quality Assessment
+
+Before analysis, data quality was evaluated to ensure reliability.
+
+### Missing Values Analysis
 
 ![Missing Values](images/missing_values.png)
 
-This visualization shows the percentage of missing values in each column. It helps identify data completeness issues and guides the cleaning strategy.
+This visualization shows the percentage of missing values in each column. It helps identify data completeness issues and informs preprocessing decisions.
 
 ---
 
-### Outliers vs Inliers Distribution
+### Outliers vs Inliers
 
 ![Outliers](images/outliers_inliers.png)
 
-This chart highlights the proportion of inliers and outliers in the dataset. Outliers were analyzed carefully as they can significantly affect business insights such as revenue and customer behavior.
+This chart shows the distribution of inliers and outliers in the dataset. Outliers were analyzed carefully as they can significantly affect revenue and customer behavior insights.
+
+---
+
+### Stock Code Frequency
+
+![Stock Codes](images/top_stock_codes.png)
+
+This visualization highlights the most frequently occurring stock codes, helping identify high-demand or frequently purchased products.
 
 ---
 
@@ -33,11 +62,16 @@ This chart highlights the proportion of inliers and outliers in the dataset. Out
 
 This section focuses on understanding customer behavior and segmentation.
 
-### Customer Segments Distribution (RFM Analysis)
+---
 
-![RFM Segments](images/customer_segments.png)
+### Customer Segmentation (RFM Analysis)
 
-This visualization groups customers into behavioral segments based on Recency, Frequency, and Monetary value. It helps identify loyal, at-risk, and high-value customers for targeted marketing strategies.
+![Customer Segments](images/customer_segments.png)
+
+Customers are grouped based on Recency, Frequency, and Monetary value. This segmentation helps identify:
+- Loyal customers  
+- At-risk customers  
+- High-value customers  
 
 ---
 
@@ -45,15 +79,15 @@ This visualization groups customers into behavioral segments based on Recency, F
 
 ![Top Customers](images/top_customers.png)
 
-This chart shows the most frequent buyers. These customers are valuable for retention strategies and loyalty programs as they contribute significantly to repeat revenue.
+This visualization highlights customers with the highest number of orders. These customers are critical for retention strategies and loyalty programs.
 
 ---
 
-### Top Countries by Number of Orders
+### Top Countries by Orders
 
 ![Top Countries](images/top_countries.png)
 
-This visualization identifies geographic demand distribution. It helps businesses understand which regions generate the most sales and where to focus expansion efforts.
+This chart shows geographic distribution of orders, helping identify key markets and expansion opportunities.
 
 ---
 
@@ -61,19 +95,29 @@ This visualization identifies geographic demand distribution. It helps businesse
 
 ![RFM Distribution](images/rfm_histograms.png)
 
-These histograms show the distribution of Recency, Frequency, and Monetary values. They help understand overall customer behavior patterns and segmentation structure.
+These histograms show the distribution of Recency, Frequency, and Monetary values. They help understand overall customer behavior patterns.
+
+---
+
+### Average Spending by Recency and Frequency
+
+![Spending Analysis](images/avg_spending_rfm.png)
+
+This analysis shows how customer spending varies with engagement level. It helps identify high-value customer behavior patterns.
 
 ---
 
 ## 3. Product Performance Analysis
 
-This section identifies high-performing and underperforming products.
+This section evaluates product performance and revenue contribution.
 
-### Top Products by Total Orders
+---
+
+### Top Products by Orders
 
 ![Top Products](images/top_products.png)
 
-This visualization highlights the most frequently purchased products. These items represent core demand drivers in the business.
+This visualization highlights the most frequently purchased products, indicating strong demand items.
 
 ---
 
@@ -81,7 +125,7 @@ This visualization highlights the most frequently purchased products. These item
 
 ![Revenue Drivers](images/revenue_drivers.png)
 
-This chart identifies products that contribute the most revenue. These are critical for business profitability and inventory prioritization.
+This chart shows products contributing the highest revenue. These are critical for business profitability and inventory planning.
 
 ---
 
@@ -89,27 +133,61 @@ This chart identifies products that contribute the most revenue. These are criti
 
 ![Return Products](images/return_prone_products.png)
 
-This visualization highlights products with higher return rates. These items may indicate quality issues, pricing problems, or mismatched customer expectations.
+This visualization identifies products with high return rates. These items may require quality improvement or pricing adjustments.
 
 ---
 
-## 4. Sales Trend Analysis
+## 4. Product Recommendation System
 
-Understanding time-based patterns helps improve forecasting and planning.
+A recommendation system was built to improve product discovery and increase cross-selling opportunities.
+
+---
+
+### Market Basket Analysis (Product Associations)
+
+![Market Basket](images/market_basket.png)
+
+This analysis identifies products frequently purchased together. It helps generate "Customers also bought" style recommendations and supports product bundling strategies.
+
+---
+
+### Product Association Rules
+
+![Associations](images/product_associations.png)
+
+This visualization shows strong relationships between products based on co-purchase behavior. These insights are useful for cross-selling and upselling strategies.
+
+---
+
+### Recommendation Logic
+
+A basic collaborative filtering approach was applied:
+
+- Customers with similar purchase behavior are identified  
+- Products liked by similar customers are recommended  
+- Helps in personalized product suggestions  
+
+---
+
+## 5. Sales Trend Analysis
+
+Understanding time-based trends helps optimize business planning.
+
+---
 
 ### Monthly Sales Trends
 
 ![Monthly Sales](images/monthly_sales.png)
 
-This visualization shows sales trends over time. It helps identify seasonal spikes and business growth patterns.
+This visualization shows how sales evolve over time, helping identify seasonal demand patterns.
 
 ---
 
 ### Sales by Day of the Week
 
-![Day of Week Sales](images/sales_by_day.png)
+![Day Sales](images/sales_by_day.png)
 
-This chart shows which days generate the highest sales volume. It is useful for campaign planning and promotional strategies.
+This chart identifies which days generate the highest sales, useful for campaign planning and promotions.
 
 ---
 
@@ -117,31 +195,32 @@ This chart shows which days generate the highest sales volume. It is useful for 
 
 ![Hourly Sales](images/sales_by_hour.png)
 
-This visualization identifies peak shopping hours. It helps optimize marketing timing and website traffic strategies.
+This visualization shows peak shopping hours, helping optimize marketing timing and operational planning.
 
 ---
 
 ## Key Business Insights
 
-- A small number of products generate the majority of revenue  
+- A small number of products generate most of the revenue  
 - Customer segmentation reveals clear behavioral patterns  
-- Repeat customers contribute significantly to total revenue  
-- Sales vary strongly by time (monthly, daily, hourly trends)  
-- Certain products show high return rates and need attention  
+- Repeat customers contribute significantly to total sales  
+- Sales vary strongly by time (monthly, weekly, hourly trends)  
+- Certain products have high return rates and need attention  
+- Product associations enable effective cross-selling strategies  
 
 ---
 
 ## Business Value
 
-This project demonstrates practical skills in:
+This project demonstrates real-world data analytics capabilities:
 
-- Customer segmentation (RFM analysis)  
-- Product performance evaluation  
-- Sales trend analysis  
-- Data cleaning and preprocessing  
+- Customer segmentation and retention analysis  
+- Product performance optimization  
+- Revenue driver identification  
 - Recommendation system design  
+- Time-based sales forecasting insights  
 
-It directly reflects real-world business problems faced in e-commerce analytics.
+It directly reflects skills required in data analyst roles and freelance analytics projects.
 
 ---
 
@@ -151,13 +230,13 @@ It directly reflects real-world business problems faced in e-commerce analytics.
 - Pandas, NumPy  
 - Matplotlib, Seaborn  
 - Scikit-learn  
+- MLxtend (Association Rules)  
 - RFM Analysis Techniques  
-
-
 
 ---
 
+
 ## 👤 Author
 
-Rabail Shafeeq  
+Rabail Shafeeq
 Data Analyst | Python | Machine Learning | Business Intelligence  
