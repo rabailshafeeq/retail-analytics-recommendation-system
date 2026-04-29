@@ -83,14 +83,43 @@ This visualization identifies products that generate the highest revenue and are
 
 ## 4. Product Recommendation System
 
-### Product Associations (Market Basket Analysis)
+A collaborative filtering-based recommendation system was developed using Nearest Neighbors to suggest products based on similar customer purchase behavior.
 
-![Market Basket](images/market_basket.png)
+---
 
-This analysis identifies products frequently bought together. It supports:
-- Cross-selling strategies  
-- Product bundling  
-- “Customers also bought” recommendations  
+### Customer-Based Product Recommendations
+
+For each customer, the model identifies similar users and recommends products based on shared purchasing patterns.
+
+Example output:
+
+Random Customer ID: 14456.0
+
+Recommended Products:
+- 84882  
+- 21191  
+- 84231  
+- 23511  
+- 21311  
+
+---
+
+### Approach Used
+
+- Customer-product interaction matrix was created  
+- Nearest Neighbors algorithm was applied  
+- Similar customers were identified based on purchase behavior  
+- Products purchased by similar users were recommended  
+
+---
+
+### Business Value
+
+This recommendation system helps:
+- Improve personalized product discovery  
+- Increase repeat purchases  
+- Enhance customer engagement  
+- Support data-driven marketing strategies   
 
 ---
 
