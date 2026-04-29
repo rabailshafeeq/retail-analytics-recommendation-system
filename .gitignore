@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env
+
+# Data files
+data/raw/
+data/processed/
+*.csv
+*.xlsx
+*.json
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE-specific files (IntelliJ, PyCharm)
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Logs and temporary files
+logs/
+*.log
+*.tmp
+
+# Python packaging
+*.egg-info/
+dist/
+build/
+
+# Cache and other temporary files
+.cache/
+*.pkl
+*.sav
+
+# OS-specific files
+.DS_Store
+Thumbs.db
