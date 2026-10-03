@@ -1,6 +1,12 @@
 # Retail Analytics & Product Recommendation System  
 ### Turning Transaction Data into Actionable Business Intelligence
 
+**In one line:** RFM customer segmentation and a collaborative-filtering product recommender built on retail transaction data, with a live Streamlit dashboard.
+
+**Skills demonstrated:** Python (pandas, NumPy), scikit-learn (Nearest Neighbors), RFM analysis, recommendation systems, Streamlit.
+
+**Data and how to run:** the transaction data is included as uci_online_retail.xlsx. To run the app locally, install the packages in requirements.txt and start app.py with Streamlit.
+
 ---
 
 ## Live Dashboard
